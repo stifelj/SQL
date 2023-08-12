@@ -1,0 +1,18 @@
+CREATE TABLE products (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, section TEXT);
+INSERT INTO products VALUES (1, "Black T-Shirt",3, 20, "Activewear");
+INSERT INTO products VALUES (2, "White T-Shirt",9, 15, "Activewear");
+INSERT INTO products VALUES (3, "Red T-Shirt",12, 17, "Activewear");
+INSERT INTO products VALUES (4, "Gym Shorts",2, 30, "Activewear");
+INSERT INTO products VALUES (5, "Jeans",8, 50, "Fall Collection");
+INSERT INTO products VALUES (6, "Black Hoodie",6, 35, "Fall Collection");
+INSERT INTO products VALUES (7, "White Hoodie",13, 35, "Fall Collection");
+INSERT INTO products VALUES (8, "Cargo Pants", 20, 45, "Fall Collection");
+INSERT INTO products VALUES (9, "White Beanie", 31, 20, "Accessories");
+INSERT INTO products VALUES (10, "Grey Beanie", 14, 20, "Accessories");
+INSERT INTO products VALUES (11, "White Socks", 58, 10, "Accessories");
+INSERT INTO products VALUES (12, "Earbuds", 6, 100, "Accessories");
+INSERT INTO products VALUES (13, "No Show Socks", 19, 11, "Accessories");
+INSERT INTO products VALUES (14, "Quartz Watch", 3, 200, "Accessories");
+INSERT INTO products VALUES (15, "Air Force Ones", 11, 110, "Shoes");
+SELECT * FROM products WHERE price > 20 ORDER BY price;
+SELECT section, SUM(price) FROM products GROUP BY section
